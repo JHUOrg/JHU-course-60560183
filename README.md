@@ -1,6 +1,7 @@
-# JHU-course-60560183 - Wheel of Jeopardy!
+# Wheel of Jeopardy!
+## JHU Course: 605.601.83 Summer
 
-## Instructions for code setup
+### Instructions for code setup
 
 1. Do not run `git init`. Run `git clone https://github.com/somsubhro/JHU-course-60560183`. `git clone` will ensure your local repository is tracking with the remote.
 2. Run `git pull`. This will update your local repository with changes from the remote. `git pull` should be used every day you interact with a repository with a remote, at the minimum. 
