@@ -13,11 +13,12 @@
 ## Code structure
 
 ```
-JHU-course-60560183     --> Base
-└── jhucourse           --> Actual Module
+JHU-course-60560183                 --> Base
+└── jhucourse                       --> Actual Module
     ├── woj             
-    │   ├── backend
-    │   ├── frontend
+    │   ├── backend                 --> Package
+    │   ├── frontend                --> Package
+    │   │   ├── wheelsubsystem.py   --> Class
     │   ├── tests
 └── main.py
 └── DesignDoc
