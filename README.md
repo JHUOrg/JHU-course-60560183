@@ -18,7 +18,9 @@ JHU-course-60560183                 --> Base
     ├── woj             
     │   ├── backend                 --> Package
     │   ├── frontend                --> Package
-    │   │   ├── wheelsubsystem.py   --> Class
+    │   │   ├── wheelsubsystem.py   --> Module
+    │   ├── logging                 --> Package
+    │   │   ├── centrallogging.py   --> Module
     │   ├── staticconfigurations    --> Package
     │   │   ├── wheelsectorsstore.json
     │   ├── tests
