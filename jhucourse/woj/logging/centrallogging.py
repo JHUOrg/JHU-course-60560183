@@ -1,5 +1,9 @@
 import logging
 
+"""
+Central logging class. Four levels of logging are supported: ERROR, WARNING, INFO, DEBUG.
+"""
+
 
 class CentralLogger:
 
