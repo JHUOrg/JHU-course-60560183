@@ -1,7 +1,6 @@
 import json
 import os
 import sys
-
 from jhucourse.woj.logging.centrallogging import CentralLogger
 
 """
