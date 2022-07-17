@@ -31,3 +31,13 @@ JHU-course-60560183                 --> Base
 ## Style guide
 We will use [PEP 8 Style Guide](https://peps.python.org/pep-0008/#introduction). Using an IDE like PyCharm will provide idiomatic expressions as suggestions along the way.
 Also, some idiomatic expression follow the [Zen of Python](https://peps.python.org/pep-0020/)
+
+## Error handling
+We have implemented cental error handling. Simply import the central logger by using `from jhucourse.woj.logging.centrallogging import CentralLogger`. Then in your exception block use the following code: 
+
+```
+golog = CentralLogger()
+golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
+```
+
+Instead of `golog` you can use any other instance variable name. Three levels of logging are supported: `ERROR`, `DEBUG`, `WARNING`.
