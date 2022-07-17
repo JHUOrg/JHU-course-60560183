@@ -40,6 +40,6 @@ golog = CentralLogger()
 golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
 ```
 
-Instead of `golog` you can use any other instance variable name. Three levels of logging are supported: `ERROR`, `WARNING`, `INFO`, 'DEBUG'.
+Instead of `golog` you can use any other instance variable name. Four levels of logging are supported: `ERROR`, `WARNING`, `INFO`, `DEBUG`.
 
 **Note**: All supported error levels will get logged to a local file `JHULogFile.log` except `DEBUG`. Logs of debug level will be displayed on the stream. The levels in decreasing order of severity are: `ERROR` > `WARNING` > `INFO` > `DEBUG`
