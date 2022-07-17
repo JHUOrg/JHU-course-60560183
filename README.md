@@ -25,3 +25,7 @@ JHU-course-60560183                 --> Base
 └── main.py
 └── DesignDoc
 ```
+
+## Style guide
+We will use [PEP 8 Style Guide](https://peps.python.org/pep-0008/#introduction). Using an IDE like PyCharm will provide idiomatic expressions as suggestions along the way.
+Also, some idiomatic expression follow the [Zen of Python](https://peps.python.org/pep-0020/)

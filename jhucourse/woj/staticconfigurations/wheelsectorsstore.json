@@ -1,0 +1,28 @@
+{
+  "sector_details": [
+    {
+      "sector_name": "Lose Turn",
+      "sector_value": "LT"
+    },
+    {
+      "sector_name": "Free Turn",
+      "sector_value": "FT"
+    },
+    {
+      "sector_name": "Bankrupt",
+      "sector_value": "B"
+    },
+    {
+      "sector_name": "Player's Choice",
+      "sector_value": "PC"
+    },
+    {
+      "sector_name": "Opponent's Choice",
+      "sector_value": "OC"
+    },
+    {
+      "sector_name": "Spin Again",
+      "sector_value": "SA"
+    }
+  ]
+}
