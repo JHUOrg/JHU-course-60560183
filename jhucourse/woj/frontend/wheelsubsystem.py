@@ -34,6 +34,9 @@ class WheelSubsystem:
                         wheel_sectors_file.close()
                         break
             config_files.close()
+
+            golog = CentralLogger()
+            golog.log_for_woj(__name__, 'INFO', 'get_static_wheel_sectors method execution complete')
         except Exception:
             golog = CentralLogger()
             golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
