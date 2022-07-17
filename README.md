@@ -19,6 +19,8 @@ JHU-course-60560183                 --> Base
     │   ├── backend                 --> Package
     │   ├── frontend                --> Package
     │   │   ├── wheelsubsystem.py   --> Class
+    │   ├── staticconfigurations    --> Package
+    │   │   ├── wheelsectorsstore.json
     │   ├── tests
 └── main.py
 └── DesignDoc
