@@ -8,3 +8,16 @@
 4. Switch to the newly created branch by running `git switch <new-branch-name>`
 5. Run `git status` for peace of mind - this will show any locally changed files that are not yet tracked or committed. There should not be any at this point (maybe a `.DS_Store` file in some cases, and that's okay)
 6. Start coding!
+
+## Code structure
+
+```
+JHU-course-60560183     --> Base
+└── jhucourse           --> Actual Module
+    ├── woj             
+    │   ├── backend
+    │   ├── frontend
+    │   ├── tests
+└── main.py
+└── DesignDoc
+```
