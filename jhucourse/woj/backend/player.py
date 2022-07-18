@@ -1,12 +1,10 @@
-import os
-import sys
-import json
 
 class Player:
     def __init__(self, player_name = None):
         self.player_name = player_name
         self.player_score = 0
         self.player_turns_taken = 0
+        self.player_lost_turn = False
 
     def get_player_name(self):
         if self.player_name is not None:
@@ -26,4 +24,7 @@ class Player:
     def set_player_score(self, value_increase):
         self.player_score += value_increase
         return
+
+    def get_player_lost_turn(self):
+        return self.player_lost_turn 
         

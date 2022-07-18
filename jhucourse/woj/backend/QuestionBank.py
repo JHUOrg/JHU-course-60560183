@@ -1,5 +1,4 @@
 import csv 
-import json
 
 class QuestionBank:
     def __init__(self, path_to_question_bank):
