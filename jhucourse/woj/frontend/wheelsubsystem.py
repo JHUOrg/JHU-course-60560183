@@ -1,41 +1,44 @@
 import json
 import os
 import sys
-from jhucourse.woj.logging.centrallogging import CentralLogger
+# from jhucourse.woj.logging.centrallogging import CentralLogger
+from flask import Flask
 
-"""
-This class will be used for the Wheel experience
-"""
+app = Flask(__name__)
 
 WHEEL_SECTOR_STORAGE_FILE = 'wheelsectorsstore.json'
-STATIC_CONFIGS_DIR = 'jhucourse/woj/staticconfigurations/'
+STATIC_CONFIGS_DIR = '/Users/somsubhr/JHU-course-60560183/jhucourse/woj/staticconfigurations/'
 
 
 class WheelSubsystem:
     """
     This method will get all the static wheel sectors from json config file
     """
-    @classmethod
-    def get_static_wheel_sectors(cls):
+    @app.route("/wheelsectors")
+    def get_static_wheel_sectors():
         try:
-            with os.scandir(STATIC_CONFIGS_DIR) as config_files:
-                for entry in config_files:
 
-                    if entry.name == WHEEL_SECTOR_STORAGE_FILE:
+            wheel_sector_list = []
+            wheel_sectors_file = open(STATIC_CONFIGS_DIR + WHEEL_SECTOR_STORAGE_FILE, 'r')
+            wheel_sectors_data = json.load(wheel_sectors_file)
 
-                        wheel_sectors_file = open(STATIC_CONFIGS_DIR + entry.name, 'r')
-                        wheel_sectors_data = json.load(wheel_sectors_file)
+            for sector in wheel_sectors_data['sector_details']:
+                wheel_sector_list.append(sector['sector_name'])
+                # TODO: Implementation pending
+                #  Add code for using the sector data upstream
+            wheel_sectors_file.close()
 
-                        for sector in wheel_sectors_data['sector_details']:
-                            print(sector['sector_name'])
-                            # TODO: Implementation pending
-                            #  Add code for using the sector data upstream
-                        wheel_sectors_file.close()
-                        break
-            config_files.close()
+            return str(wheel_sectors_data)
 
-            golog = CentralLogger()
-            golog.log_for_woj(__name__, 'INFO', 'get_static_wheel_sectors method execution complete')
+            # golog = CentralLogger()
+            # golog.log_for_woj(__name__, 'INFO', 'get_static_wheel_sectors method execution complete')
         except Exception:
-            golog = CentralLogger()
-            golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
+            # golog = CentralLogger()
+            # golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
+            print(sys.exc_info())
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    # print("something")
+
