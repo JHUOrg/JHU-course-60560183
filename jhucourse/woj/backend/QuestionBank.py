@@ -19,6 +19,18 @@ class QuestionBank:
         # Return user a json object which contains jeopardy questions 
         return json_question_array
 
+    def choose_random_questions(self):
+        """
+        This method will randomly select questions, set wheel sectors from the categories
+        pseudo-code:
+        1. Call read_question_bank which will read the question bank csv
+        2. Parse the results from previous call and randomly choose 6 question categories
+        and 5 questions for each category
+        3. Remove any existing question categories and add the question categories from previous step in
+        the /dynamicconfigurations/dynamicwheelsectors.json file
+        :return:
+        """
+
 
 if __name__ == "__main__":
     app.run(debug=True)
