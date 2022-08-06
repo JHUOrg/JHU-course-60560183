@@ -1,0 +1,24 @@
+{
+  "players_in_session": [
+    {
+      "player_name": "",
+      "player_score": "",
+      "player_free_turn_count": ""
+    },
+    {
+     "player_name": "",
+      "player_score": "",
+      "player_free_turn_count": ""
+    },
+    {
+      "player_name": "",
+      "player_score": "",
+      "player_free_turn_count": ""
+    },
+    {
+      "player_name": "",
+      "player_score": "",
+      "player_free_turn_count": ""
+    }
+  ]
+}

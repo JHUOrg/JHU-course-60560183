@@ -48,6 +48,7 @@ class WheelSubsystem:
         question categories
         pseudo-code:
         1. Read /dynamicconfigurations/dynamicwheelsectors.json file
+        2. Return the wheel sectors to the caller
         :return: json object for dynamic wheel sectors
         """
 
@@ -59,7 +60,7 @@ class WheelSubsystem:
         pseudo-code:
         1. call get_static_wheel_sectors
         2. call get_dynamic_wheel_sectors
-        3. merge json
+        3. merge json from the previous 2 calls
         4. return json
         :return: json object for all wheel sectors (static + dynamic)
         """
