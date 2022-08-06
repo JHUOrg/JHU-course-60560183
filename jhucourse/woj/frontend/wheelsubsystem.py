@@ -65,8 +65,9 @@ class WheelSubsystem:
         :return: json object for all wheel sectors (static + dynamic)
         """
         wss = WheelSubsystem()
-        static_wheel_sectors = WheelSubsystem.get_static_wheel_sectors()
         dynamic_wheel_sectors = wss.get_dynamic_wheel_sectors()
+
+        static_wheel_sectors = WheelSubsystem.get_static_wheel_sectors()
 
         all_wheel_sectors: json = ''
         return all_wheel_sectors
