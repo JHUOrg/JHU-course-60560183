@@ -1,0 +1,164 @@
+[{
+    "name":"Sports",
+    "questions":[{
+            "questionText":"What is the diameter of a basketball hoop in inches?",
+            "answers":["18 inches","16 inches","17 inches"],
+            "correctAnswer": 0
+        },
+        {
+            "questionText": "What do you call it when a bowler makes three strikes in a row?",
+            "answers":["Strike","Turkey","Double"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "What is the national sport of Canada?",
+            "answers":["Hockey","Lacrosse","Soccer"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "How long is a marathon?",
+            "answers":["26.2 miles","13 miles","24.1 miles"],
+            "correctAnswer": 0
+        },
+        {
+             "questionText": "What sport is Bela Karolyi known for coaching?",
+            "answers":["Womens Gymnastic","NASCAR","Mens Track & Field"],
+            "correctAnswer": 0
+    }]},
+    {
+        "name":"Geography",
+        "questions":[{
+            "questionText": "What is the only country that borders the United Kingdom?",
+            "answers":["Denmark","Scotland","Ireland"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "In which country would you find the city of Dresden?",
+            "answers":["Ukraine","Germany","France"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "After Alaska, which U.S. state has the longest coastline?",
+            "answers":["Texas","California","Florida"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "How many time zones does Australia have",
+            "answers":["Two","Four","Three"],
+            "correctAnswer": 2
+        },
+        {
+             "questionText": "How many large islands make up Hawaii?",
+            "answers":["Eight","Nine","Seven"],
+            "correctAnswer": 0
+        }]},
+    {
+        "name":"History",
+        "questions":[{
+            "questionText": "What year did the French Revolution start?",
+            "answers":["1839","1750","1789"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "When did the construction of the Great Wall of China begin?",
+            "answers":["1st century AD","7th century BC","3rd centry BC"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "Where was Martin Luther King, Jr. born?",
+            "answers":["Montgomery, Alabama","Atlanta, Georgia","Dallas, Texas"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "Which year was George H.W. Bush elected president?",
+            "answers":["1988","1992","1984"],
+            "correctAnswer": 0
+        },
+        {
+             "questionText": "How old was Queen Elizabeth II when she was crowned the Queen of England?",
+            "answers":["17","27","29"],
+            "correctAnswer": 1
+        }]},
+    {
+    "name":"Science",
+    "questions":[{
+            "questionText": "How many teeth does an adult human have?",
+            "answers":["32","36","28"],
+            "correctAnswer": 0
+        },
+        {
+            "questionText": "What is the tallest type of grass?",
+            "answers":["Switchgrass","Bamboo","Big Bluestem"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "This was the first genetically engineered organism",
+            "answers":["Corn","Tobacco","Rat"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "This is the hardest naturally occurring substance",
+            "answers":["Emerald","Diamond","Corrundum"],
+            "correctAnswer": 1
+        },
+        {
+             "questionText": "The first Earth Day was celebrated in this year",
+            "answers":["1950","1960","1970"],
+            "correctAnswer": 2
+        }]},
+    {
+        "name":"Astronomy",
+        "questions":[{
+            "questionText": "This year boasted the first woman in space",
+            "answers":["1963","1968","1983"],
+            "correctAnswer": 0
+        },
+        {
+            "questionText": "These are the only two planets in our solar system without moons",
+            "answers":["Mercury & Venus","Venus & Mars","Neptune & Pluto"],
+            "correctAnswer": 0
+        }, 
+        {
+            "questionText": "The three main parts of a comet are the nucleus, the tail, and the ______",
+            "answers":["Zenith","Umbra","Coma"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "It is the term for the condition when three celestial bodies are arranged in a straight line",
+            "answers":["Occultation","Parallax","Syzygy"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "The planets make up this percentage of the mass in our solar system",
+            "answers":["1.46%","0.135%",".000565%"],
+            "correctAnswer": 1
+        }]},
+    {
+        "name":"Random",
+        "questions":[{
+            "questionText": "Name the smallest country",
+            "answers":["Singapore","Vatican City","Jamaica"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "Who wrote 'The Fear Place'?",
+            "answers":["Phyllis Reynolds Naylor","Paul Lee","Gail Sakurai"],
+            "correctAnswer": 0
+        }, 
+        {
+            "questionText": "Characters in a tweet.",
+            "answers":["130","140","95"],
+            "correctAnswer": 1
+        },
+        {
+            "questionText": "Where were the 2014 Olympics held?",
+            "answers":["London","Vancouver","Sochi"],
+            "correctAnswer": 2
+        },
+        {
+            "questionText": "Which of the following is a 'tributary'",
+            "answers":["Hudson Bay","Han River","Mississippi River"],
+            "correctAnswer": 2
+        }]
+    }
+]
