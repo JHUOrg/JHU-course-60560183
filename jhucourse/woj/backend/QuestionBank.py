@@ -29,9 +29,16 @@ class QuestionBank:
         and 5 questions for each category
         3. Remove any existing question categories and add the question categories from previous step in
         the /dynamicconfigurations/dynamicwheelsectors.json file
-        4. Remove any existing data and add question category, question text,
+        4. Remove any existing data and add question category, question text, answers,
         and score value to /dynamicconfigurations/questionsforcurrentgame.json file
         :return: None
+        """
+
+    def get_questions_for_current_game(self):
+        """
+        This method will read /dynamicconfigurations/questionsforcurrentgame.json and pass a json
+        object back to the caller
+        :return: Questions for current game
         """
 
 
