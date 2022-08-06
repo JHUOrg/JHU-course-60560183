@@ -28,7 +28,7 @@ class WheelSubsystem:
                 #  Add code for using the sector data upstream
             wheel_sectors_file.close()
 
-            return str(wheel_sectors_data)
+            return wheel_sectors_data
 
             # golog = CentralLogger()
             # golog.log_for_woj(__name__, 'INFO', 'get_static_wheel_sectors method execution complete')
