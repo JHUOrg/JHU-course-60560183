@@ -1,9 +1,9 @@
-import os
-import sys
-import json
+# import os
+# import sys
+# import json
 
 class Player:
-    def __init__(self, player_name = None):
+    def __init__(self, player_name=None):
         self.player_name = player_name
         self.player_score = 0
         self.player_turns_taken = 0
@@ -20,6 +20,8 @@ class Player:
         return
 
     def increase_player_turn(self):
+        #TODO: This method is probably not required given there is no player specific turns.
+        # Its total 50 spins for the game.
         self.player_turns_taken += 1
         return
 
@@ -27,3 +29,13 @@ class Player:
         self.player_score += value_increase
         return
         
+    def update_player(self, player_name):
+        """
+        This method will persist the player details in /dynamicconfigurations/playersinsession.json
+        based on the player_name
+        pseudo-code:
+        1. Get player attributes from the constructor
+        2. Set the player values in the file by updating the contents of the file
+        :param player_name: Name of the player
+        :return: None
+        """
