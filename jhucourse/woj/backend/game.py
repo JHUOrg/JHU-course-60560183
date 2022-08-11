@@ -3,14 +3,15 @@ import numpy
 import player
 'import QuestionBank'
 
-class game:
+class Game:
     def __init__(self):
         self.player_list = []
         self.current_player = 0
         self.spin_counter = 50
+        self.question_count = 36
         self.current_round = 1
         self.turnPoints = 0
-        self.question_bank
+        self.question_bank = None
 
     'Add a player to the list'
     def addPlayer(self, name):
@@ -20,26 +21,23 @@ class game:
 
     'Remove a player from the list'
     def deletePlayer(self, player):
+        print(f'Deleting Player: {player.player_name}')
         self.player_list.remove(player)
         return
 
     'Get the next player in the list'
     def nextPlayer(self):
-        len = self.player_list.count
-        current = self.current_player
-
-        if (current+1 >= len):
+        if (self.current_player+1 >= self.player_list.count):
             self.current_player = 0
         else:
-            self.current_player = current+1
+            self.current_player = self.current_player+1
 
         self.resetTurnPoints()
         return
 
     'Get the current player'
     def getCurrentPlayer(self):
-        current = self.current_player
-        return self.player_list(current)
+        return self.player_list(self.current_player)
 
     'Reset the points for current turn'
     def resetTurnPoints(self):
@@ -55,6 +53,7 @@ class game:
         turnPoints = self.calculateRoundPoints(points)
 
         if (result):
+            self.question_count -= 1
             self.turnPoints += turnPoints
         else:
             self.turnPoints -= turnPoints
@@ -66,9 +65,7 @@ class game:
 
     'Update the current player score'
     def updatePlayerScore(self):
-        player = self.getCurrentPlayer()
-        points = self.calculatePoints()
-        player.set_player_score(points)
+        self.getCurrentPlayer().set_player_score(self.turnPoints)
         return
 
     'Return the current number of wheel spins'
@@ -82,8 +79,7 @@ class game:
     def verifyWheelSpins(self):
         if (self.getWheelSpins <= 0):
             return True
-        else:
-            return False
+        return False
     
     'Reset the wheel spins back to 50'
     def resetWheelSpins(self):
@@ -100,7 +96,8 @@ class game:
     If all questions have been answered return true.
     """
     def verifyQuestionCount(self):
-        'if (question_bank.count <= 0)'
+        if (self.question_count <= 0):
+            return True
         return False
 
     """
@@ -108,10 +105,8 @@ class game:
     Verify wheel spins left and questions left.
     """
     def verifyEndRound(self):
-        spinsLeft = self.verifyWheelSpins()
-        questionsLeft = self.verifyQuestionCount()
 
-        if (spinsLeft or questionsLeft):
+        if (self.verifyWheelSpins() or self.verifyQuestionCount()):
             self.nextRound()
         
         return
