@@ -100,6 +100,11 @@ class Game:
             return True
         return False
 
+    'Reset the wheel spins back to 36'
+    def resetQuestionCount(self):
+        self.question_count = 36
+        return
+
     """
     Check if the current round is over.
     Verify wheel spins left and questions left.
@@ -113,9 +118,10 @@ class Game:
 
     'Update to round 2 or end the game'
     def nextRound(self):
-        round = self.current_round
 
-        if (round == 1):
+        if (self.current_round == 1):
+            self.resetWheelSpins()
+            self.resetQuestionCount()
             self.current_round = 2
             return
         else:
