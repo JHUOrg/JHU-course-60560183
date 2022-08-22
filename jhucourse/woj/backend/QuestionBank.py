@@ -82,6 +82,10 @@ class QuestionBank:
         object back to the caller
         :return: Questions for current game
         """
+        wheel_sectors_file = open(QUESTIONS_FOR_CURRENT_GAME, 'r')
+        wheel_sectors_data = json.load(wheel_sectors_file)
+
+        return wheel_sectors_data
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
