@@ -1,16 +1,19 @@
 import csv 
 import json
-from flask import Flask
+# from flask import Flask
+import random
 
-app = Flask(__name__)
+# app = Flask(__name__)
+
+PATH_TO_QB = 'jhucourse/woj/staticconfigurations/test_question.csv'
+QUESTIONS_FOR_CURRENT_GAME = 'jhucourse/woj/dynamicconfigurations/questionsforcurrentgame.json'
+DYNAMIC_WHEEL_SECTORS = 'jhucourse/woj/dynamicconfigurations/dynamicwheelsectors.json'
 
 
 class QuestionBank:
-    # def __init__(self, path_to_question_bank):
-    #     self.path_to_question_bank = path_to_question_bank
-
-    @app.route("/questionbank")
-    def read_question_bank(self, path_to_question_bank):
+    # @app.route("/questionbank")
+    def read_question_bank(self) -> list:
+        path_to_question_bank = PATH_TO_QB
         json_question_array = []
         with open(path_to_question_bank, encoding='utf-8') as csv_file:
             csv_read = csv.DictReader(csv_file) 
@@ -23,7 +26,6 @@ class QuestionBank:
         """
         This method will randomly select questions, set wheel sectors from the categories,
         and add question details for the game session
-        pseudo-code:
         1. Call read_question_bank which will read the question bank csv
         2. Parse the results from previous call and randomly choose 6 question categories
         and 5 questions for each category
@@ -33,6 +35,39 @@ class QuestionBank:
         and score value to /dynamicconfigurations/questionsforcurrentgame.json file
         :return: None
         """
+        json_question_array = self.read_question_bank()
+        len_of_json_question_array = len(json_question_array)
+        json_cat_array = [json_question_array[random.randint(1, len_of_json_question_array-1)]["Category"]]
+        cat_array_counter = 0
+        minimal_question_array = []
+
+        while cat_array_counter < 6:
+            random_question_indices = [question_index for question_index, random_cat_name
+                                       in enumerate(json_question_array)
+                                       if random_cat_name["Category"] == json_cat_array[cat_array_counter]]
+            # print(random_question_indices)
+            _question_count = 0
+            with open(QUESTIONS_FOR_CURRENT_GAME, "w") as question_file:
+                for random_question_index in random_question_indices:
+                    _question_count += 1
+                    if _question_count > 5:
+                        break
+                    minimal_question_array.append(json_question_array[random_question_index])
+                json.dump(minimal_question_array, question_file, indent=4)
+
+            _random_num_gen_trial = 0
+            _random_index = random.randint(1, len_of_json_question_array - 1)
+            while any(ele == json_question_array[_random_index]["Category"] for ele in json_cat_array):
+                _random_index = random.randint(1, len_of_json_question_array - 1)
+                _random_num_gen_trial += 1
+                if _random_num_gen_trial > len_of_json_question_array:
+                    break
+            if _random_num_gen_trial <= len_of_json_question_array:
+                json_cat_array.append(json_question_array[_random_index]["Category"])
+            cat_array_counter += 1
+
+        with open(DYNAMIC_WHEEL_SECTORS, "w") as wheel_sector_file:
+            json.dump(json_cat_array, wheel_sector_file, indent=2)
 
     def get_questions_for_current_game(self):
         """
@@ -42,5 +77,5 @@ class QuestionBank:
         """
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)

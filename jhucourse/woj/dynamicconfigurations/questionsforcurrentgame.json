@@ -1,31 +1,263 @@
-{
-  "question_in_current_game": [
+[
     {
-      "question_category": "",
-      "question_text": "",
-      "answer_option_1": "",
-      "answer_option_2": "",
-      "answer_option_3": "",
-      "correct_answer_id": "",
-      "score": ""
+        "Category": "HISTORY",
+        "Value": "$200",
+        "Question": "For the last 8 years of his life, Galileo was under house arrest for espousing this man's theory",
+        "CorrectAnswer": "Copernicus",
+        " Answer0": " \"Copernicus\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
     },
     {
-      "question_category": "",
-      "question_text": "",
-      "answer_option_1": "",
-      "answer_option_2": "",
-      "answer_option_3": "",
-      "correct_answer_id": "",
-      "score": ""
+        "Category": "HISTORY",
+        "Value": "$400",
+        "Question": "Built in 312 B.C. to link Rome & the South of Italy, it's still in use today",
+        "CorrectAnswer": "the Appian Way",
+        " Answer0": "the Appian Way",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
     },
     {
-      "question_category": "",
-      "question_text": "",
-      "answer_option_1": "",
-      "answer_option_2": "",
-      "answer_option_3": "",
-      "correct_answer_id": "",
-      "score": ""
+        "Category": "HISTORY",
+        "Value": "$600",
+        "Question": "In 1000 Rajaraja I of the Cholas battled to take this Indian Ocean island now known for its tea",
+        "CorrectAnswer": "Ceylon (or Sri Lanka)",
+        " Answer0": " \"Ceylon (or Sri Lanka)\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "HISTORY",
+        "Value": "$800",
+        "Question": "Karl led the first of these Marxist organizational efforts; the second one began in 1889",
+        "CorrectAnswer": "the International",
+        " Answer0": " \"the International\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "HISTORY",
+        "Value": "$1000",
+        "Question": "This Asian political party was founded in 1885 with \"Indian National\" as part of its name",
+        "CorrectAnswer": "the Congress Party",
+        " Answer0": " \"the Congress Party\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EVERYBODY TALKS ABOUT IT...",
+        "Value": "$200",
+        "Question": "The city of Yuma in this state has a record average of 4,055 hours of sunshine each year",
+        "CorrectAnswer": "Arizona",
+        " Answer0": " \"Arizona\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EVERYBODY TALKS ABOUT IT...",
+        "Value": "$400",
+        "Question": "In the winter of 1971-72, a record 1,122 inches of snow fell at Rainier Paradise Ranger Station in this state",
+        "CorrectAnswer": "Washington",
+        " Answer0": " \"Washington\"",
+        " Answer1": " \"Answer1\"",
+        " Answer2": "Answer2 "
+    },
+    {
+        "Category": "EVERYBODY TALKS ABOUT IT...",
+        "Value": "$600",
+        "Question": "On June 28, 1994 the nat'l weather service began issuing this index that rates the intensity of the sun's radiation",
+        "CorrectAnswer": "the UV index",
+        " Answer0": " \"the UV index\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EVERYBODY TALKS ABOUT IT...",
+        "Value": "$800",
+        "Question": "Africa's lowest temperature was 11 degrees below zero in 1935 at Ifrane, just south of Fez in this country",
+        "CorrectAnswer": "Morocco",
+        " Answer0": " \"Morocco\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EPITAPHS & TRIBUTES",
+        "Value": "$200",
+        "Question": "Signer of the Dec. of Indep., framer of the Constitution of Mass., second President of the United States",
+        "CorrectAnswer": "John Adams",
+        " Answer0": " \"John Adams\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EPITAPHS & TRIBUTES",
+        "Value": "$400",
+        "Question": "\"And away we go\"",
+        "CorrectAnswer": "Jackie Gleason",
+        " Answer0": " \"Jackie Gleason\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EPITAPHS & TRIBUTES",
+        "Value": "$600",
+        "Question": "Outlaw: \"Murdered by a traitor and a coward whose name is not worthy to appear here\"",
+        "CorrectAnswer": "Jesse James",
+        " Answer0": " \"Jesse James\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EPITAPHS & TRIBUTES",
+        "Value": "$2,000",
+        "Question": "1939 Oscar winner: \"...you are a credit to your craft, your race and to your family\"",
+        "CorrectAnswer": "Hattie McDaniel",
+        " Answer0": " \"Hattie McDaniel\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "EPITAPHS & TRIBUTES",
+        "Value": "$1000",
+        "Question": "Revolutionary War hero: \"His spirit is in Vermont now\"",
+        "CorrectAnswer": "Ethan Allen",
+        " Answer0": " \"Ethan Allen\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "ESPN's TOP 10 ALL-TIME ATHLETES",
+        "Value": "$200",
+        "Question": "No. 2: 1912 Olympian; football star at Carlisle Indian School; 6 MLB seasons with the Reds, Giants & Braves",
+        "CorrectAnswer": "Jim Thorpe",
+        " Answer0": "Jim Thorpe",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "ESPN's TOP 10 ALL-TIME ATHLETES",
+        "Value": "$400",
+        "Question": "No. 8: 30 steals for the Birmingham Barons; 2,306 steals for the Bulls",
+        "CorrectAnswer": "Michael Jordan",
+        " Answer0": " \"Michael Jordan\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "ESPN's TOP 10 ALL-TIME ATHLETES",
+        "Value": "$600",
+        "Question": "No. 1: Lettered in hoops, football & lacrosse at Syracuse & if you think he couldn't act, ask his 11 \"unclean\" buddies",
+        "CorrectAnswer": "Jim Brown",
+        " Answer0": " \"Jim Brown\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "ESPN's TOP 10 ALL-TIME ATHLETES",
+        "Value": "$800",
+        "Question": "No. 10: FB/LB for Columbia U. in the 1920s; MVP for the Yankees in '27 & '36; \"Gibraltar in Cleats\"",
+        "CorrectAnswer": "(Lou) Gehrig",
+        " Answer0": " \"(Lou) Gehrig\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "ESPN's TOP 10 ALL-TIME ATHLETES",
+        "Value": "$1000",
+        "Question": "No. 5: Only center to lead the NBA in assists; track scholarship to Kansas U.; marathoner; volleyballer",
+        "CorrectAnswer": "Wilt Chamberlain",
+        " Answer0": " \"Wilt Chamberlain\"",
+        " Answer1": " \"Answer1\"",
+        " Answer2": " \"Answer2\""
+    },
+    {
+        "Category": "3-LETTER WORDS",
+        "Value": "$200",
+        "Question": "In the title of an Aesop fable, this insect shared billing with a grasshopper",
+        "CorrectAnswer": "the ant",
+        " Answer0": " \"the ant\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "3-LETTER WORDS",
+        "Value": "$400",
+        "Question": "Cows regurgitate this from the first stomach to the mouth & chew it again",
+        "CorrectAnswer": "the cud",
+        " Answer0": " \"the cud\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "3-LETTER WORDS",
+        "Value": "$600",
+        "Question": "A small demon, or a mischievous child (who might be a little demon!)",
+        "CorrectAnswer": "imp",
+        " Answer0": " \"imp\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "3-LETTER WORDS",
+        "Value": "$800",
+        "Question": "In geologic time one of these, shorter than an eon, is divided into periods & subdivided into epochs",
+        "CorrectAnswer": "era",
+        " Answer0": " \"era\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "3-LETTER WORDS",
+        "Value": "$1000",
+        "Question": "A single layer of paper, or to perform one's craft diligently",
+        "CorrectAnswer": "ply",
+        " Answer0": " \"ply\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "THE COMPANY LINE",
+        "Value": "$200",
+        "Question": "In 1963, live on \"The Art Linkletter Show\", this company served its billionth burger",
+        "CorrectAnswer": "McDonald's",
+        " Answer0": " \"McDonald's\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "THE COMPANY LINE",
+        "Value": "$400",
+        "Question": "This housewares store was named for the packaging its merchandise came in & was first displayed on",
+        "CorrectAnswer": "Crate & Barrel",
+        " Answer0": " \"Crate & Barrel\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "THE COMPANY LINE",
+        "Value": "$600",
+        "Question": "This company's Accutron watch, introduced in 1960, had a guarantee of accuracy to within one minute a  month",
+        "CorrectAnswer": "Bulova",
+        " Answer0": " \"Bulova\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "THE COMPANY LINE",
+        "Value": "$800",
+        "Question": "Edward Teller & this man partnered in 1898 to sell high fashions to women",
+        "CorrectAnswer": "(Paul) Bonwit",
+        " Answer0": " \"(Paul) Bonwit\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
+    },
+    {
+        "Category": "THE COMPANY LINE",
+        "Value": "$1000",
+        "Question": "The Kirschner brothers, Don & Bill, named this ski company for themselves & the second-highest mountain",
+        "CorrectAnswer": "K2",
+        " Answer0": " \"K2\"",
+        " Answer1": "Answer1",
+        " Answer2": "Answer2"
     }
-  ]
-}
+]

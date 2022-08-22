@@ -2,12 +2,13 @@ import json
 # import os
 import sys
 from jhucourse.woj.logging.centrallogging import CentralLogger
-from flask import Flask
+import random
 
-app = Flask(__name__)
+STATIC_CONFIGS_DIR = 'jhucourse/woj/staticconfigurations/'
+DYNAMIC_CONFIGS_DIR = 'jhucourse/woj/dynamicconfigurations/'
 
 WHEEL_SECTOR_STORAGE_FILE = 'wheelsectorsstore.json'
-STATIC_CONFIGS_DIR = ''
+WHEEL_SECTOR_DYNAMIC_FILE = 'dynamicwheelsectors.json'
 
 
 class WheelSubsystem:
@@ -28,14 +29,12 @@ class WheelSubsystem:
 
             for sector in wheel_sectors_data['sector_details']:
                 wheel_sector_list.append(sector['sector_name'])
-                # TODO: Implementation pending
-                #  Add code for using the sector data upstream
             wheel_sectors_file.close()
 
             golog = CentralLogger()
             golog.log_for_woj(__name__, 'INFO', 'get_static_wheel_sectors method execution complete')
 
-            return wheel_sectors_data
+            return wheel_sector_list
 
         except Exception:
             golog = CentralLogger()
@@ -44,35 +43,41 @@ class WheelSubsystem:
 
     def get_dynamic_wheel_sectors(self) -> json:
         """
-        This method will get the dynamic wheel sectors based on randomly chosen questions and associated
-        question categories
-        pseudo-code:
-        1. Read /dynamicconfigurations/dynamicwheelsectors.json file
-        2. Return the wheel sectors to the caller
+        This method will get the dynamic wheel sectors from the /dynamicconfigurations/dynamicwheelsectors.json file
+        based on randomly chosen questions and associated question categories
+
         :return: json object for dynamic wheel sectors
         """
+        try:
+            wheel_sectors_file = open(DYNAMIC_CONFIGS_DIR + WHEEL_SECTOR_DYNAMIC_FILE, 'r')
+            wheel_sectors_data = json.load(wheel_sectors_file)
 
-        return "dynamic wheel sectors"
+            wheel_sectors_file.close()
+
+            golog = CentralLogger()
+            golog.log_for_woj(__name__, 'INFO', 'get_dynamic_wheel_sectors method execution complete')
+
+            return wheel_sectors_data
+
+        except Exception:
+            golog = CentralLogger()
+            golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
+            print(sys.exc_info())
 
     def get_all_wheel_sectors(self) -> json:
         """
         This method will return all wheel sectors (static + dynamic) to the caller
-        pseudo-code:
-        1. call get_static_wheel_sectors
-        2. call get_dynamic_wheel_sectors
-        3. merge json from the previous 2 calls
-        4. return json
         :return: json object for all wheel sectors (static + dynamic)
         """
         wss = WheelSubsystem()
         dynamic_wheel_sectors = wss.get_dynamic_wheel_sectors()
-
         static_wheel_sectors = WheelSubsystem.get_static_wheel_sectors()
 
-        all_wheel_sectors: json = ''
+        all_wheel_sectors: json = dynamic_wheel_sectors + dynamic_wheel_sectors + static_wheel_sectors
+        random.shuffle(all_wheel_sectors)
         return all_wheel_sectors
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
-    # print("something")
+# if __name__ == "__main__":
+#     app.run(debug=True)
+#     # print("something")
