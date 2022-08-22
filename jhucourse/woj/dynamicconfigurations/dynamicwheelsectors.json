@@ -1,13 +1,8 @@
-{
-  "dynamic_wheel_sectors": [
-     {
-      "d_sector_name": "",
-    },
-    {
-      "d_sector_name": ""
-    },
-    {
-      "d_sector_name": ""
-    }
-  ]
-}
+[
+  "HISTORY",
+  "EVERYBODY TALKS ABOUT IT...",
+  "EPITAPHS & TRIBUTES",
+  "ESPN's TOP 10 ALL-TIME ATHLETES",
+  "3-LETTER WORDS",
+  "THE COMPANY LINE"
+]
