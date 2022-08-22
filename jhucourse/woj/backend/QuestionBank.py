@@ -1,7 +1,8 @@
 import csv 
 import json
-# from flask import Flask
 import random
+from jhucourse.woj.logging.centrallogging import CentralLogger
+import sys
 
 # app = Flask(__name__)
 
@@ -35,39 +36,45 @@ class QuestionBank:
         and score value to /dynamicconfigurations/questionsforcurrentgame.json file
         :return: None
         """
-        json_question_array = self.read_question_bank()
-        len_of_json_question_array = len(json_question_array)
-        json_cat_array = [json_question_array[random.randint(1, len_of_json_question_array-1)]["Category"]]
-        cat_array_counter = 0
-        minimal_question_array = []
+        try:
+            json_question_array = self.read_question_bank()
+            len_of_json_question_array = len(json_question_array)
+            json_cat_array = [json_question_array[random.randint(1, len_of_json_question_array-1)]["Category"]]
+            cat_array_counter = 0
+            minimal_question_array = []
 
-        while cat_array_counter < 6:
-            random_question_indices = [question_index for question_index, random_cat_name
-                                       in enumerate(json_question_array)
-                                       if random_cat_name["Category"] == json_cat_array[cat_array_counter]]
-            # print(random_question_indices)
-            _question_count = 0
-            with open(QUESTIONS_FOR_CURRENT_GAME, "w") as question_file:
-                for random_question_index in random_question_indices:
-                    _question_count += 1
-                    if _question_count > 5:
-                        break
-                    minimal_question_array.append(json_question_array[random_question_index])
-                json.dump(minimal_question_array, question_file, indent=4)
+            while cat_array_counter < 6:    # maximum 6 question categories
+                random_question_indices = [question_index for question_index, random_cat_name
+                                           in enumerate(json_question_array)
+                                           if random_cat_name["Category"] == json_cat_array[cat_array_counter]]
+                _question_count = 0
+                with open(QUESTIONS_FOR_CURRENT_GAME, "w") as question_file:
+                    for random_question_index in random_question_indices:
+                        _question_count += 1
+                        if _question_count > 5:
+                            break   # break if the number of questions for a category exceeds 5
+                        minimal_question_array.append(json_question_array[random_question_index])
+                    json.dump(minimal_question_array, question_file, indent=4)
 
-            _random_num_gen_trial = 0
-            _random_index = random.randint(1, len_of_json_question_array - 1)
-            while any(ele == json_question_array[_random_index]["Category"] for ele in json_cat_array):
+                _random_num_gen_trial = 0   # to keep track of runaway while loop. sh!t happens
                 _random_index = random.randint(1, len_of_json_question_array - 1)
-                _random_num_gen_trial += 1
-                if _random_num_gen_trial > len_of_json_question_array:
-                    break
-            if _random_num_gen_trial <= len_of_json_question_array:
-                json_cat_array.append(json_question_array[_random_index]["Category"])
-            cat_array_counter += 1
+                while any(ele == json_question_array[_random_index]["Category"] for ele in json_cat_array):
+                    _random_index = random.randint(1, len_of_json_question_array - 1)
+                    _random_num_gen_trial += 1
+                    if _random_num_gen_trial > len_of_json_question_array:
+                        break   # this will invoke if random number gen have tried enough
+                        # but unable to find new distinct categories due to limited types of distinct categories in QB
+                if _random_num_gen_trial <= len_of_json_question_array:   # only add more cat if while is not exhausted
+                    json_cat_array.append(json_question_array[_random_index]["Category"])
+                cat_array_counter += 1
 
-        with open(DYNAMIC_WHEEL_SECTORS, "w") as wheel_sector_file:
-            json.dump(json_cat_array, wheel_sector_file, indent=2)
+            with open(DYNAMIC_WHEEL_SECTORS, "w") as wheel_sector_file:
+                json.dump(json_cat_array, wheel_sector_file, indent=2)
+
+        except Exception:
+            golog = CentralLogger()
+            golog.log_for_woj(__name__, 'ERROR', sys.exc_info())
+            print(sys.exc_info())
 
     def get_questions_for_current_game(self):
         """
@@ -75,7 +82,6 @@ class QuestionBank:
         object back to the caller
         :return: Questions for current game
         """
-
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
